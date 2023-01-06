@@ -4,6 +4,7 @@ import (
     "log"
 
 	"springsearch/db"
+    "springsearch/query"
 )
 
 func main() {
@@ -13,7 +14,7 @@ func main() {
         log.Fatal(err)
     }
 
-    res := db.Search("world")
+    res := db.Search(&query.TextQuery{Term: "world"})
     log.Printf("%v results found", res.NumResults())
     
     for res.HasNext() {

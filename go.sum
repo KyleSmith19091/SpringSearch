@@ -11,6 +11,11 @@ github.com/jdkato/prose v1.1.1/go.mod h1:jkF0lkxaX5PFSlk9l4Gh9Y+T57TqUZziWT7uZbW
 github.com/jdkato/prose/v2 v2.0.0 h1:XRwsTM2AJPilvW5T4t/H6Lv702Qy49efHaWfn3YjWbI=
 github.com/jdkato/prose/v2 v2.0.0/go.mod h1:7LVecNLWSO0OyTMOscbwtZaY7+4YV2TPzlv5g5XLl5c=
 github.com/jung-kurt/gofpdf v1.0.3-0.20190309125859-24315acbbda5/go.mod h1:7Id9E/uU8ce6rXgefFLlgrJj/GYY22cpxn+r32jIOes=
+github.com/jupp0r/go-priority-queue v0.0.0-20160601094913-ab1073853bde/go.mod h1:RDgD/dfPmIwFH0qdUOjw71HjtWg56CtyLIoHL+R1wJw=
+github.com/kyroy/kdtree v0.0.0-20200419114247-70830f883f1d h1:1n5M/49q9H6QtNJiiVL/W5mqgT1UdlGQ7oLP+DkJ1vs=
+github.com/kyroy/kdtree v0.0.0-20200419114247-70830f883f1d/go.mod h1:6oJGQK7VSg3RxSQ7QspgqpCmKjIbAslgT2wBXbFJUZw=
+github.com/kyroy/priority-queue v0.0.0-20180327160706-6e21825e7e0c h1:1c7+XOOGQ19cXjZ1Ss/irljQxgPvb+8z+jNEprCXl20=
+github.com/kyroy/priority-queue v0.0.0-20180327160706-6e21825e7e0c/go.mod h1:R477L6j2/dUcE0q0aftk0kR5Xt93W7g1066AodcJhEo=
 github.com/mingrammer/commonregex v1.0.1 h1:QY0Z1Bl80jw9M3+488HJXPWnZmvtu3UdvxyodP2FTyY=
 github.com/mingrammer/commonregex v1.0.1/go.mod h1:/HNZq7qReKgXBxJxce5SOxf33y0il/ZqL4Kxgo2NLcA=
 github.com/montanaflynn/stats v0.6.3/go.mod h1:wL8QJuTMNUDYhXwkmfOly8iTdp5TEcJFWZD2D7SIkUc=
@@ -21,6 +26,7 @@ github.com/shogo82148/go-shuffle v0.0.0-20180218125048-27e6095f230d/go.mod h1:2h
 github.com/shurcooL/sanitized_anchor_name v1.0.0/go.mod h1:1NzhyTcUVG4SuEtjjoZeVRXNmyL/1OwPU0+IJeTBvfc=
 github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
 github.com/stretchr/testify v1.2.2/go.mod h1:a8OnRcib4nhh0OaRAV+Yts87kKdq0PP7pXfy6kDkUVs=
+github.com/stretchr/testify v1.4.0/go.mod h1:j7eGeouHqKxXV5pUuKE4zz7dFj8WfuZ+81PSLYec5m4=
 github.com/stretchr/testify v1.6.1/go.mod h1:6Fq8oRcR53rry900zMqJjRRixrwX3KX962/h/Wwjteg=
 github.com/tidwall/gjson v1.10.2/go.mod h1:/wbyibRr2FHMks5tjHJ5F8dMZh3AcwJEMf5vlfC0lxk=
 github.com/tidwall/gjson v1.14.4 h1:uo0p8EbA09J7RQaflQ1aBRffTR7xedD2bcIVSYxLnkM=

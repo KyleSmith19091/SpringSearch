@@ -8,6 +8,7 @@ import (
 	invertedindex "springsearch/invertedIndex"
 	"springsearch/result"
 	"springsearch/tokeniser"
+    "springsearch/query"
 
 	walLog "github.com/tidwall/wal"
 )
@@ -54,8 +55,8 @@ func NewDB(walPath string, dataPath string) (*DB, error) {
     return db, nil
 }
 
-func (db *DB) Search(term string) *cursor.Cursor {
-    tokens := db.tokeniser.Split(term)
+func (db *DB) Search(q query.Query) *cursor.Cursor {
+    tokens := db.tokeniser.Split(q.GetTerm())
     docs := db.invertedIndex.GetDocuments(tokens)
 
     var docData []result.SearchResult
