@@ -9,6 +9,11 @@ inverted indexes and term vectors to support full text search. Data and indexes 
 Springsearch is useful for searching Logs, metrics or even for developing a search backend.
 
 ## Get Started
+First Download the package
+
+```
+go get github.com/KyleSmith19091/SpringSearch@v0.1.0
+```
 
 ```go
 import (
