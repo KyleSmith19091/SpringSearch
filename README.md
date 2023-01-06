@@ -10,3 +10,47 @@ Springsearch is useful for searching Logs, metrics or even for developing a sear
 
 ## Get Started
 
+```go
+import (
+    "log"
+
+	"github.com/KyleSmith19091/SpringSearch/db"
+    "github.com/KyleSmith19091/SpringSearch/query"
+)
+
+func main() {
+    // 1st param = Path to index data directory, 2nd param = Path to directory where data should be stored
+    db, err := db.NewDB("./mylog", "./data")
+    
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    // Perform search query, returns a Cursor
+    res := db.Search(&query.TextQuery{Term: "world"})
+    log.Printf("%v results found", res.NumResults())
+    
+    // Iterate over cursor and print data
+    for res.HasNext() {
+        data, err := res.Next() 
+    
+        if err != nil {
+            break
+        }
+
+        log.Println(data)
+    }
+}
+```
+
+## How does this work?
+The search engine takes in a query interface(to support multiple types of queries). For the sake of this example
+we consider the case of the TextQuery, which has a single attribute called Term. For the sake of this example assume
+the index has already been given data to index. Consider we query the engine with the text query "Hello, World!". The engine
+takes this string and tokenises the string into a token array ["Hello", "World"].
+
+These tokens are then passed to our inverted index which will look up the documents
+that contain these tokens. The index will then pass these documents to the original
+query which can then perform further operations on these documents(the text query just returns the given documents).
+These documents in turn point to data that is currently on disk, we then  build a cursor structure from the documents.
+The cursor ensures that we only load the current document's content in memory.
