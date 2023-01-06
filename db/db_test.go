@@ -4,6 +4,8 @@ import (
 	"log"
 	"os"
 	"testing"
+
+	"github.com/KyleSmith19091/SpringSearch/query"
 )
 
 const (
@@ -34,7 +36,7 @@ func createDB() (*DB) {
 func TestSearchMultipleReturn(t *testing.T) {
     db := createDB()
     
-    res := db.Search("name")
+    res := db.Search(&query.TextQuery{Term: "name"})
 
     if res.NumResults() != 2 {
         log.Fatalf("Number of results incorrect %v", res.NumResults())
@@ -72,7 +74,7 @@ func TestSearchMultipleReturn(t *testing.T) {
 func TestNumberSearch(t *testing.T) {
     db := createDB()
 
-    res := db.Search("19")
+    res := db.Search(&query.TextQuery{Term: "19"})
 
     if res.NumResults() != 1 {
         log.Fatalf("Number of results incorrect %v", res.NumResults())
@@ -98,7 +100,7 @@ func TestNoResult(t *testing.T) {
     cleanupTestLogFiles()
     db := createDB()
 
-    res := db.Search("NOPE")
+    res := db.Search(&query.TextQuery{Term: "NOPE"})
 
     if res.NumResults() != 0 {
         log.Fatalf("Number of results incorrect %v", res.NumResults())

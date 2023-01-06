@@ -1,6 +1,8 @@
 package query
 
-import "springsearch/document"
+import (
+    "github.com/KyleSmith19091/SpringSearch/document"
+)
 
 type Query interface {
     GetTerm() string

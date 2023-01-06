@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"encoding/gob"
 
-	termvector "springsearch/termVector"
-	"springsearch/tokeniser"
+	termvector "github.com/KyleSmith19091/SpringSearch/termVector"
+	"github.com/KyleSmith19091/SpringSearch/tokeniser"
 )
 
 type Document struct {

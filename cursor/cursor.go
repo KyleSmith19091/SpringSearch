@@ -2,7 +2,7 @@ package cursor
 
 import (
 	"errors"
-	"springsearch/result"
+	"github.com/KyleSmith19091/SpringSearch/result"
 )
 
 type Cursor struct {

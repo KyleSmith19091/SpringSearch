@@ -3,9 +3,9 @@ package invertedindex
 import (
 	"bytes"
 	"encoding/gob"
-
-	"springsearch/document"
-	"springsearch/tokeniser"
+        
+	"github.com/KyleSmith19091/SpringSearch/document"
+	"github.com/KyleSmith19091/SpringSearch/tokeniser"
 )
 
 type InvertedIndex struct {

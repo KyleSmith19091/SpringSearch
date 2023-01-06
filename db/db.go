@@ -3,12 +3,12 @@ package db
 import (
 	"log"
 
-	"springsearch/cursor"
-	"springsearch/document"
-	invertedindex "springsearch/invertedIndex"
-	"springsearch/result"
-	"springsearch/tokeniser"
-    "springsearch/query"
+	"github.com/KyleSmith19091/SpringSearch/cursor"
+	"github.com/KyleSmith19091/SpringSearch/document"
+	invertedindex "github.com/KyleSmith19091/SpringSearch/invertedIndex"
+	"github.com/KyleSmith19091/SpringSearch/result"
+	"github.com/KyleSmith19091/SpringSearch/tokeniser"
+    "github.com/KyleSmith19091/SpringSearch/query"
 
 	walLog "github.com/tidwall/wal"
 )

@@ -3,8 +3,8 @@ package main
 import (
     "log"
 
-	"springsearch/db"
-    "springsearch/query"
+	"github.com/KyleSmith19091/SpringSearch/db"
+    "github.com/KyleSmith19091/SpringSearch/query"
 )
 
 func main() {
