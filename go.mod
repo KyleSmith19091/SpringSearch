@@ -1,4 +1,4 @@
-module github.com/KyleSmith19091/springsearch
+module github.com/KyleSmith19091/SpringSearch
 
 go 1.19
 
