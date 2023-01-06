@@ -43,6 +43,7 @@ func NewDocumentFromTokens(title string, tokens []*tokeniser.Token, path uint64)
     }
 }
 
+// Might be used in future development v
 func (doc *Document) Serialize() ([]byte, error) {
     buf := new(bytes.Buffer)
     encoder := gob.NewEncoder(buf)
